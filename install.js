@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
           submitButton.value = originalSubmitText;
 
-          // Display success or error messages based on the response
           if (data.formResponse && data.formResponse.success) {
             successBlock.style.display = "block";
             errorBlock.style.display = "none";
@@ -75,13 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      handleFormSubmission(); // Execute the form submission process
+      handleFormSubmission();
 
       } else {
-        throw new Error('Request failed');
+        //throw new Error('Request failed');
+				successBlock.style.display = "none";
+        errorBlock.style.display = "block";
+        submitButton.value = originalSubmitText;
       }
     } catch (error) {
-      console.error("Error:", error.message);
+      //console.error("Error:", error.message);
     }
   }
   
@@ -92,20 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
   postData(url, data);
 
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
     });
   });
 });
