@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const formBlocks = document.querySelectorAll('[easyRecaptcha="formWrapper"]');
+console.log(formBlocks)
   const serverUrl = "https://hook.us1.make.com/xkqqq79lce3itmn1t5m36vu3pye90yqk";
 
   formBlocks.forEach((formBlock) => {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     form.addEventListener("submit", function (event) {
+	    console.log("Form Submitted")
       event.preventDefault();
       submitButton.value = loadingText;
       
