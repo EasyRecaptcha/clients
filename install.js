@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       } else {
         //throw new Error('Request failed');
-				successBlock.style.display = "none";
+	successBlock.style.display = "none";
         errorBlock.style.display = "block";
         submitButton.value = originalSubmitText;
       }
